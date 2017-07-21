@@ -35,9 +35,9 @@ ngTodo.controller('ngTodoController',function($scope){
 			$scope.Todos.push(todo);			
 		}
 
-	// $scope.deleteTodo = function(todo) {
-	// 		var index = $scope.Todos.indexOf(todo);
-	// 		$scope.Todos.splice(index, 1);
-	// 	}
+	$scope.deleteTodo = function(todo) {
+			var index = $scope.Todos.indexOf(todo);
+			$scope.Todos.splice(index, 1);
+		}
 
 });
