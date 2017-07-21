@@ -30,9 +30,10 @@ ngTodo.controller('ngTodoController',function($scope){
 
 
 
-	// $scope.addTodo = function(todo) {
-	// 		$scope.Todos.push(todo);
-	// 	}
+	$scope.addTodo = function(title,details) {
+		    todo={title:title,details:details};
+			$scope.Todos.push(todo);			
+		}
 
 	// $scope.deleteTodo = function(todo) {
 	// 		var index = $scope.Todos.indexOf(todo);
