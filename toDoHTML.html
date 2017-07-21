@@ -1,6 +1,7 @@
 <DOCTYPE html>
 <html ng-app="ngTodo">
 	<head>
+		<link rel="stylesheet" type="text/css" href="font-awesome.css">
 		<link rel="stylesheet" type="text/css" href="toDoCSS.css">
 		<script type="text/javascript" src="angular.min.js"></script>
 		<script type="text/javascript" src="toDoJS.js"></script>
@@ -8,19 +9,26 @@
 	<body>
 
 		<div ng-controller="ngTodoController">
-		<input type="text" ng-model="add.title">
-		<input type="text" ng-model="add.details"> 
+		<input type="text" placeholder="search" ng-model="query">
+		 <button ng-click="searchTodo(todo)">
+			Search todo
+		</button>
+		<input type="text" placeholder="todo title" ng-model="add.title">
+		<input type="text" placeholder="todo detail" ng-model="add.details"> 
         <button ng-click="addTodo(add.title,add.details)">
 			Add todo
 		</button>
 		<h1>Todos</h1>
 		<ul>
-			<li class="list" ng-repeat="todo in Todos">
+			<li class="list" ng-repeat="todo in Todos | filter : query">
 				<h2>{{ todo.title }}</h2>
 				<p>{{ todo.details }}</p>
-				<button ng-click="deleteTodo(todo)">
+				<!-- <button ng-click="deleteTodo(todo)">
 					Delete
-				</button>
+				</button> -->
+				<i class="fa-trash" ng-click="deleteTodo(todo)">
+					Delete
+				</i>
 			</li>
 		</ul>		
 	</body>

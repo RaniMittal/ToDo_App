@@ -29,10 +29,15 @@ ngTodo.controller('ngTodoController',function($scope){
 				   ];
 
 
-
+    //clear(element(by.model('add.title')));
 	$scope.addTodo = function(title,details) {
 		    todo={title:title,details:details};
 			$scope.Todos.push(todo);			
+		}
+
+	$scope.searchTodo = function(todo) {
+			var index = $scope.Todos.indexOf(todo);
+			$scope.Todos.splice(index, 1);
 		}
 
 	$scope.deleteTodo = function(todo) {
