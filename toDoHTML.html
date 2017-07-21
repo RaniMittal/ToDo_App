@@ -7,11 +7,18 @@
 	<body>
 
 		<div ng-controller="ngTodoController">
-		<!-- <input type="text" name=""> 
-        <button type="submit" name="">Add</button>
-		<li ng-repeat=[]>
-
-		</li> -->
-		
+		<!-- <input type="text" ng-model="add.list"> 
+        <button ng-click="addTodo(add.list)">
+			Add
+		</button> -->
+		<h1>Todos</h1>
+		<ul>
+			<li ng-repeat="todo in Todos">
+				{{ todo }}
+				<!-- <button ng-click="deleteTodo(todo)">
+					Delete
+				</button> -->
+			</li>
+		</ul>		
 	</body>
 </html>
