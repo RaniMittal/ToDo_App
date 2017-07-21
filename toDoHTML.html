@@ -1,6 +1,7 @@
 <DOCTYPE html>
 <html ng-app="ngTodo">
 	<head>
+		<link rel="stylesheet" type="text/css" href="toDoCSS.css">
 		<script type="text/javascript" src="angular.min.js"></script>
 		<script type="text/javascript" src="toDoJS.js"></script>
 	</head>
@@ -13,8 +14,9 @@
 		</button> -->
 		<h1>Todos</h1>
 		<ul>
-			<li ng-repeat="todo in Todos">
-				{{ todo }}
+			<li class="list" ng-repeat="todo in Todos">
+				<h2>{{ todo.title }}</h2>
+				<p>{{ todo.details }}</p>
 				<!-- <button ng-click="deleteTodo(todo)">
 					Delete
 				</button> -->
