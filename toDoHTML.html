@@ -10,9 +10,6 @@
 
 		<div ng-controller="ngTodoController">
 		<input type="text" placeholder="search" ng-model="query">
-		 <button ng-click="searchTodo(todo)">
-			Search todo
-		</button>
 		<input type="text" placeholder="todo title" ng-model="add.title">
 		<input type="text" placeholder="todo detail" ng-model="add.details"> 
         <button ng-click="addTodo(add.title,add.details)">
@@ -23,12 +20,10 @@
 			<li class="list" ng-repeat="todo in Todos | filter : query">
 				<h2>{{ todo.title }}</h2>
 				<p>{{ todo.details }}</p>
-				<!-- <button ng-click="deleteTodo(todo)">
+				<!-- <button ng-click="deleteTodo($index)">
 					Delete
 				</button> -->
-				<i class="fa-trash" ng-click="deleteTodo(todo)">
-					Delete
-				</i>
+				<i class="fa fa-trash" ng-click="deleteTodo($index)"></i>
 			</li>
 		</ul>		
 	</body>

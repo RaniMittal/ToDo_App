@@ -36,12 +36,10 @@ ngTodo.controller('ngTodoController',function($scope){
 		}
 
 	$scope.searchTodo = function(todo) {
-			var index = $scope.Todos.indexOf(todo);
 			$scope.Todos.splice(index, 1);
 		}
 
-	$scope.deleteTodo = function(todo) {
-			var index = $scope.Todos.indexOf(todo);
+	$scope.deleteTodo = function(index) {
 			$scope.Todos.splice(index, 1);
 		}
 
